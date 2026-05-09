@@ -23,11 +23,12 @@ export default function RegisterPage() {
     <div className="max-w-md mx-auto mt-20 p-6 bg-gray-900 rounded-xl text-white">
 
       <h1 className="text-3xl font-bold mb-6">
-        Register
+        
+        Sign Up
+        
       </h1>
 
       <div className="flex flex-col gap-4">
-
         <input
           className="p-3 rounded bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500"
           placeholder="Email"
@@ -49,7 +50,6 @@ export default function RegisterPage() {
         >
           Create account
         </button>
-
       </div>
     </div>
   );
