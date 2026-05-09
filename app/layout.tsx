@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Header from "@/components/Header";
 
 export default function RootLayout({
   children,
@@ -7,15 +7,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          fontFamily: "Arial",
-          padding: "40px",
-          background: "#fafafa",
-        }}
-      >
-        <Navbar />
-
+      <body className="bg-black text-white font-sans">
+        <Header />
         {children}
       </body>
     </html>

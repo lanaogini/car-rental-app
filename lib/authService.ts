@@ -1,27 +1,25 @@
 import { users } from "./users";
 
 export function register(email: string, password: string) {
-  const exists = users.find((u) => u.email === email);
+  const exists = users.some((u) => u.email === email);
 
   if (exists) {
     throw new Error("User already exists");
   }
 
-  const user = {
+  const newUser = {
     id: Date.now(),
     email,
     password,
   };
 
-  users.push(user);
+  users.push(newUser);
 
-  return user;
+  return newUser;
 }
 
 export function login(email: string, password: string) {
-  const user = users.find(
-    (u) => u.email === email && u.password === password
-  );
+  const user = users.find((u) => u.email === email && u.password === password);
 
   if (!user) {
     throw new Error("Invalid credentials");

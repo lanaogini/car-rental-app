@@ -1,14 +1,10 @@
-import Link from "next/link";
-
 type CarCardProps = {
-  id: number;
   name: string;
   price: number;
   location: string;
 };
 
 export default function CarCard({
-  id,
   name,
   price,
   location,
@@ -39,20 +35,18 @@ export default function CarCard({
         <strong>{price}€/day</strong>
       </p>
 
-      <Link href={`/cars/${id}`}>
-        <button
-          style={{
-            padding: "8px 16px",
-            background: "black",
-            color: "white",
-            border: "none",
-            borderRadius: "8px",
-            cursor: "pointer",
-          }}
-        >
-          View
-        </button>
-      </Link>
+      <button
+        style={{
+          padding: "8px 16px",
+          background: "black",
+          color: "white",
+          border: "none",
+          borderRadius: "8px",
+          cursor: "pointer",
+        }}
+      >
+        View
+      </button>
     </div>
   );
 }
