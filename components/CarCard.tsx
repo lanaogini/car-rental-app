@@ -19,6 +19,7 @@ export default function CarCard({ id, name, price, location, image }: CarCardPro
           src={image}
           alt={name}
           fill
+          sizes="(max-width: 768px) 100vw, 33vw"
           className="object-cover"
         />
       </div>
@@ -28,7 +29,8 @@ export default function CarCard({ id, name, price, location, image }: CarCardPro
         <h3 className="text-lg font-semibold text-gray-900 mb-1">{name}</h3>
         <p className="text-gray-500 text-sm mb-2">📍 {location}</p>
         <p className="text-xl font-bold text-gray-900 mb-4">
-          {price}€<span className="text-sm font-normal text-gray-400">/day</span>
+          {price}€
+          <span className="text-sm font-normal text-gray-400">/day</span>
         </p>
 
         <Link
